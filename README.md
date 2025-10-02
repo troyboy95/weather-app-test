@@ -7,7 +7,7 @@ A simple web application to display real-time weather data for various regions i
 - **Region Selection:** View weather for multiple Hong Kong districts.
 - **Current Conditions:** See temperature, humidity, and weather condition for the selected region.
 - **Animated Icons:** Weather conditions are visualized with animated icons powered by [react-lottie](https://github.com/LottieFiles/react-lottie).
-- **Live Data:** All data is fetched from the official HK Observatory API.
+- **Current & Accurate Data:** All data is fetched from the official HK Observatory API.
 
 ## Tech Stack
 
@@ -22,7 +22,7 @@ A simple web application to display real-time weather data for various regions i
 
 - Built with Express.js.
 - Fetches weather data from the HK Observatory API.
-- Maps weather icon codes to readable conditions using custom mappings based on HK API documentation.
+- Maps weather icon codes to readable conditions using custom mappings based on HK OBSERVATORY ICONS documentation.
 - Provides a REST API endpoint for the frontend to consume.
 
 ### Frontend
