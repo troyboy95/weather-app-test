@@ -67,9 +67,14 @@ function App() {
 
   }, [location]);
 
+  { /*
+    Reasons why I like this code: Simple to use and implement, Presents basic & necessary data as per the locations
+    Reasons why I don't like: Too Simple, Illustrations could've been better; Only displaying current data, forecast would be better    
+    */}
+
   return (
     <div className="flex flex-col w-full mt-5 flex-1">
-
+      {/* Background with Icons */}
       <WeatherBackground condition={weather ? weather.prominentCondition : ""} />
 
       <div className=" p-6 w-full text-center z-10">
