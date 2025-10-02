@@ -12,15 +12,16 @@ app.use(cors(
 
 const PORT = 4000;
 
+//tesing end-point
 app.get("/", (req, res) => {
   res.send("Weather Server is running!");
 });
 
+// Fetching data as per location selected
 app.get("/api/weather/:location", async (req, res) => {
   try {
     const { location } = req.params;
     const locationFormatted = location.split('-').join(' ').toLowerCase();
-    // console.log(locationFormatted)
 
     const weatherResponse = await fetch(
       process.env.HK_OBSERVATORY_API
@@ -45,7 +46,7 @@ app.get("/api/weather/:location", async (req, res) => {
     let maxSeverity = -1;
 
     for (const cond of conditions) {
-      // Default severity = 0 if not in SEVERITY map
+      // Default severity = 0 if not in the SEVERITY map
       const sev = SEVERITY[cond] || 0;
       if (sev > maxSeverity) {
         prominentCondition = cond;
@@ -53,6 +54,7 @@ app.get("/api/weather/:location", async (req, res) => {
       }
     }
 
+    // Sending basic details
     res.status(200).json({
       location: placeData.place,
       temperature: temp,

@@ -51,6 +51,7 @@ function App() {
         const res = await fetch(`http://localhost:4000/api/weather/${location}`);
         const data = await res.json();
         if (res.status !== 200) {
+          console.error("problem here")
           throw new Error(data.error || "Failed to fetch weather data");
         }
         setWeather(data);
@@ -69,7 +70,7 @@ function App() {
   return (
     <div className="flex flex-col w-full mt-5 flex-1">
 
-      <WeatherBackground condition={weather ? weather.prominentCondition : "Sunny"} />
+      <WeatherBackground condition={weather ? weather.prominentCondition : ""} />
 
       <div className=" p-6 w-full text-center z-10">
         <h1 className="text-2xl font-bold mb-4"> Current Weather For</h1>
@@ -151,7 +152,7 @@ function App() {
             </div>
           </>
         ) : (
-          <p className="text-gray-500">Select a location to view weather</p>
+          <p className="text-gray-700">Error loading data at this time. Try changing location or restarting the app...</p>
         )}
       </div>
     </div>

@@ -12,6 +12,8 @@ import NightCloudyAnim from "../assets/lottie/Weather-cloudy(night).json";
 export default function WeatherBackground({ condition }: { condition: string }) {
   const getAnimation = () => {
     // Handling night conditions by falling back to day equivalents
+    if(condition === "") return null;
+    
     if (condition.includes("Night")) {
       if (
         condition.includes("Sunny Intervals") ||
