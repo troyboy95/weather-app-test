@@ -43,7 +43,7 @@ const LOCATIONS: LocationOption[] = [
 
 const LocationSelector: React.FC<Props> = ({ location, setLocation }) => {
   return (
-    <div className="flex flex-col items-center mt-6">
+    <div className="flex flex-col items-center mt-6 mb-4">
       <label className="mb-2 font-medium text-gray-700">
         Change location to see latest weather for that area
       </label>
