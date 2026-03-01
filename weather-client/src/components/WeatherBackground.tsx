@@ -83,7 +83,7 @@ export default function WeatherBackground({ condition }: { condition: string }) 
   const animationData = getAnimation();
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-sky-100 indeterminate:bg-sky-300 to-blue-500">
+    <div className="absolute -z-10 inset-0 flex items-center justify-center bg-gradient-to-t from-sky-100 indeterminate:bg-sky-300 to-blue-500">
       {animationData && (
         <Lottie
           loop
