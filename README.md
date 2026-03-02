@@ -13,8 +13,6 @@ I've refactored this project with a more system-level thinking, demonstrating:
 
 * Modular, typed frontend with separation of concerns
 
-* Environment-based configuration
-
 ## Features
 
 - **Region Selection:** View weather for multiple Hong Kong districts.
