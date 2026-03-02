@@ -2,6 +2,19 @@
 
 A simple web application to display real-time weather data for various regions in Hong Kong using the HK Observatory API.
 
+I've refactored this project with a more system-level thinking, demonstrating:
+* Layered backend architecture (routes → controllers → services)
+
+* TTL-based caching to reduce external API load
+
+* Timeout handling for external requests
+
+* Input validation middleware
+
+* Modular, typed frontend with separation of concerns
+
+* Environment-based configuration
+
 ## Features
 
 - **Region Selection:** View weather for multiple Hong Kong districts.
